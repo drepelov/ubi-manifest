@@ -44,7 +44,7 @@ class InconsistentDepsolverConfig(Exception):
     """
 
 
-@app.task  # type: ignore [misc]  # ignore untyped decorator
+@app.task  # type: ignore [untyped-decorator]
 def depsolve_task(
     ubi_repo_ids: Iterable[str], content_config_url: str, branch_prefix: str = ""
 ) -> None:

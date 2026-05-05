@@ -5,7 +5,7 @@ import redis
 from ubi_manifest.worker.tasks.celery import app
 
 
-@app.task  # type: ignore [misc]  # ignore untyped decorator
+@app.task  # type: ignore [untyped-decorator]
 def beat_healthcheck_task() -> None:
     """
     This task updates 'celery-beat-heartbeat' value in redis with current time every minute.

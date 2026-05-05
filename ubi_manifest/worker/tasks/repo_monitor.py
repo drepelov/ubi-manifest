@@ -11,7 +11,7 @@ from ubi_manifest.worker.utils import make_pulp_client
 _LOG = logging.getLogger(__name__)
 
 
-@app.task  # type: ignore [misc]  # ignore untyped decorator
+@app.task  # type: ignore [untyped-decorator]
 def repo_monitor_task() -> None:
     """
     This task runs various checks for relevant repositories.

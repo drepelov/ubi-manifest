@@ -225,7 +225,7 @@ def get_gitlab_healthcheck_url() -> Optional[str]:
 
     # CDN definitions were loaded from a file, check if any sync repo is on GitLab
     for configs in get_content_configs():
-        config_path = configs.get("source")
+        config_path = configs["source"]
         parsed = urlparse(config_path)
         # If there is a scheme, content config is loaded from an URL, so
         # we assume it is a GitLab URL and return its healthcheck URL.
